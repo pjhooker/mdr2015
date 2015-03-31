@@ -288,7 +288,7 @@ border-radius: 5px;
   // guarda il nome dell'icona
   console.log(data.weather[0].icon);
   // path relativo alla cartella con le icon
-  immSource = 'img/icons/weather/night/'+data.weather[0].icon +'.png' ;
+  immSource = 'img/icons/weather/'+data.weather[0].icon +'.png' ;
   $('#placeholder').html("<p><center><h5>OGGI:</h5><img src="+ immSource +" /> </br> <h6><strong>"+data.weather[0].description+"</h6></strong></center></p>");
   });
   weather.addTo(map);
