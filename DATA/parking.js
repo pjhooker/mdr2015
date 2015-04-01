@@ -32,16 +32,6 @@ var parking = [{
                 45.659859035232856
                 ] } },
 
-                { "type": "Feature",
-                  "properties": {
-                    "@id": "way\/23225179",
-                    "amenity": "parking",
-                    "created_by": "JOSM",
-                    },
-                    "geometry": {
-                      "type": "Point",
-                      "coordinates": [
-                        8.971948537818761, 45.657410859837817 ] } },
                         { "type": "Feature",
                           "properties": {
                             "@id": "way\/23225179",
