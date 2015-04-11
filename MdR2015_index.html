@@ -7,13 +7,12 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="description" content="Webmap della gara">
   <meta name="author" content="Luca Moiana">
-  <link rel="icon" href="favicon.ico">
+  <link rel="icon" href="images/favicon.ico">
 
   <title>VI maratonina del RUGARETO</title>
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css">
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css">
-  <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+  <link rel="stylesheet" href="css">
+  <link rel="stylesheet" href="css/leaflet.css">
   <link rel="stylesheet" href="css/rugareto.css">
 
   <style type="text/css">
@@ -172,19 +171,16 @@ border-radius: 5px;
   <!-- Bootstrap core JavaScript
   ================================================== -->
   <!-- Placed at the end of the document so the pages load faster -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js"></script>
-  <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  <script src='src/jquery-1.11.2.min.js'></script>
+  <script src="src/bootstrap.min.js"></script>
+  <script src="src/leaflet.js"></script>
   <script src='https://api.tiles.mapbox.com/mapbox.js/v1.6.4/mapbox.js'></script>
 
-  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css"/>
-
+  <link rel="stylesheet" href="css/font-awesome.min.css">
   <link rel="stylesheet" href="css/leaflet.awesome-markers.css">
 
   <script src="src/leaflet.awesome-markers.js"></script>
 
-  <link rel="stylesheet" href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css" />
-  <script src='https://code.jquery.com/jquery-1.11.0.min.js'></script>
   <script src="src/leaflet.groupedlayercontrol.js"></script>
   <link rel="stylesheet" href="css/leaflet.groupedlayercontrol.css" />
   <script src="src/leaflet.geometryutil.js" type="text/javascript"></script>
@@ -225,16 +221,16 @@ border-radius: 5px;
   var parcheggio_icon = L.MakiMarkers.icon({icon: "parking", color: "4444BB", size: "m"});
   //Creati markers
   var partenza = L.marker([45.656945208740474, 8.970540960046485], {icon: partenza_icon}).bindPopup("<strong>PARTENZA</strong></br>Villa Isacchi</br>dalla 8:00 alle 9:00").addTo(map);
-  var ristoro_smaria_corto = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=img/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
+  var ristoro_smaria_corto = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=images/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
   var ristoro_massina_corto = L.marker([45.6398993999927, 8.9654026], {icon: ristoro_icon}).bindPopup("<strong>Ristoro Massina</strong>");
-  var ristoro_smaria_medio = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=img/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
+  var ristoro_smaria_medio = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=images/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
   var ristoro_massina_medio = L.marker([45.6398993999927, 8.9654026], {icon: ristoro_icon}).bindPopup("<strong>Ristoro Massina</strong>");
-  var ristoro_roccolo_medio = L.marker([45.641661216226915, 8.953651498531297], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=img/roccolo.jpg><strong><br />Risotoro il Roccolo</strong>");
-  var ristoro_visconta_medio = L.marker([45.651872831999938, 8.947138857978208], {icon: ristoro_icon}).bindPopup("<img width=210 height=141 src=img/visconta.jpg><strong><br />Ristoro Visconta</strong>");
-  var ristoro_smaria_lungo = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=img/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
+  var ristoro_roccolo_medio = L.marker([45.641661216226915, 8.953651498531297], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=images/roccolo.jpg><strong><br />Risotoro il Roccolo</strong>");
+  var ristoro_visconta_medio = L.marker([45.651872831999938, 8.947138857978208], {icon: ristoro_icon}).bindPopup("<img width=210 height=141 src=images/visconta.jpg><strong><br />Ristoro Visconta</strong>");
+  var ristoro_smaria_lungo = L.marker([45.651081575394848, 8.968399155811024], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=images/smaria.jpg /><strong><br />Ristoro S. Maria</strong>");
   var ristoro_massina_lungo = L.marker([45.6398993999927, 8.9654026], {icon: ristoro_icon}).bindPopup("<strong>Ristoro Massina</strong>");
-  var ristoro_roccolo_lungo = L.marker([45.641661216226915, 8.953651498531297], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=img/roccolo.jpg><strong><br />Risotoro il Roccolo</strong>");
-  var ristoro_visconta_lungo = L.marker([45.651872831999938, 8.947138857978208], {icon: ristoro_icon}).bindPopup("<img width=210 height=141 src=img/visconta.jpg><strong><br />Ristoro Visconta</strong>");
+  var ristoro_roccolo_lungo = L.marker([45.641661216226915, 8.953651498531297], {icon: ristoro_icon}).bindPopup("<img width=210 height=131 src=images/roccolo.jpg><strong><br />Risotoro il Roccolo</strong>");
+  var ristoro_visconta_lungo = L.marker([45.651872831999938, 8.947138857978208], {icon: ristoro_icon}).bindPopup("<img width=210 height=141 src=images/visconta.jpg><strong><br />Ristoro Visconta</strong>");
   var stazione_cislago = L.marker([45.661008099999982, 8.9777585], {icon: stazione_icon}).bindPopup('Stazione di Cislago</br><a href="http://www.lenord.it">orario</a>').addTo(servizi);
   // Parcheggi
   // Dati GeoJSON
@@ -300,7 +296,7 @@ border-radius: 5px;
   // guarda il nome dell'icona
   console.log(data.weather[0].icon);
   // path relativo alla cartella con le icon
-  immSource = 'img/icons/weather/'+data.weather[0].icon +'.png' ;
+  immSource = 'images/icons/weather/'+data.weather[0].icon +'.png' ;
   $('#placeholder').html("<p><center><h5>OGGI:</h5><img src="+ immSource +" /> </br> <h6><strong>"+data.weather[0].description+"</h6></strong></center></p>");
   });
   weather.addTo(map);
