@@ -194,6 +194,7 @@ border-radius: 5px;
   <script src="DATA/corto.js"> </script>
   <script src="DATA/medio.js"> </script>
   <script src="DATA/lungo.js"> </script>
+  <script src="DATA/exp_chiusuratraffico.js"></script>
   <script type="text/javascript">
   // Mapbox access
   L.mapbox.accessToken = 'pk.eyJ1IjoibHVjYW1vaWFuYSIsImEiOiJfeUttT1pzIn0.7_LM4jNrpSFn7a9f6QqiYA';
@@ -264,6 +265,14 @@ border-radius: 5px;
   "opacity": 0.6,
   "z-index": 3
   };
+
+  var chiusuratrafficostyle = {
+    "weight": 25.0,
+    "color": '#1f78b4',
+    "dashArray": '',
+    "opacity": 0.4,
+    "fillOpacity": 0.4
+  };
   // track import
   var lungo = L.geoJson(lungo, {
   style: lungostyle
@@ -280,6 +289,12 @@ border-radius: 5px;
   }
   )
   .bindPopup('Percorribile con passeggino');
+
+  var chiusuratraffico = L.geoJson(exp_chiusuratraffico, {
+  style: chiusuratrafficostyle
+  }
+  )
+  .bindPopup('strade chiuse alle auto dalle 7.45 alle 10.00');
 
   // Aggiungere DIV per weather ANCORA DA FARE
   var weather = L.control({position: 'bottomleft'});
@@ -311,6 +326,7 @@ border-radius: 5px;
   };
   var groupedOverlays2 = {
   "come raggiungerci": servizi,
+  "chiusura traffico": chiusuratraffico
   };
   var options = { exclusiveGroups: ["Percorsi"] };
   L.control.layers(groupedOverlays, groupedOverlays2,{collapsed: false}).addTo(map);
