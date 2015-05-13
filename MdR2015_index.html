@@ -339,6 +339,15 @@ border-radius: 5px;
          map.fitBounds(bounds);
      };
   });
+  <!-- eventi per zoom -->
+var trafficobounds = chiusuratraffico.getBounds();
+map.on('layeradd', function(e) {
+if (map.hasLayer(chiusuratraffico) == true) {
+map.fitBounds(trafficobounds);
+};
+});
+  
+  
   <!--Add scalebar -->
   L.control.scale({
   position: 'bottoleft',
