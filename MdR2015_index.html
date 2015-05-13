@@ -312,6 +312,20 @@ if (map.hasLayer(chiusuratraffico) == true) {
 map.fitBounds(trafficobounds);
 };
 });
+
+var trafficobounds = chiusuratraffico.getBounds();
+map.on('layeradd', function(e) {
+if (map.hasLayer(chiusuratraffico) == true) {
+map.fitBounds(trafficobounds);
+};
+});
+
+map.on('layerremove', function(e) {
+if (map.hasLayer(chiusuratraffico) == false) {
+map.setView([45.642, 8.954], 14);
+};
+});
+
 <!--Add scalebar -->
 L.control.scale({
 position: 'bottoleft',
