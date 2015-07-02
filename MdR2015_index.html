@@ -282,7 +282,9 @@ return this._div;
 weather.update = function (props) {
 this._div.innerHTML = '<div id="placeholder"></div>';
 };
-$.getJSON('http://api.openweathermap.org/data/2.5/weather?lat=45.642&lon=8.954&units=metric&lang=IT', function(data) {
+
+// http://api.openweathermap.org/data/2.5/weather?lat=45.642&lon=8.954&units=metric&lang=IT
+$.getJSON('http://api.openweathermap.org/data/2.5/history/city?lat=45.642&lon=8.954&units=metric&start=1431853200&lang=IT&type=day', function(data) {
 // guarda il nome dell'icona
 console.log(data.weather[0].icon);
 // path relativo alla cartella con le icon
